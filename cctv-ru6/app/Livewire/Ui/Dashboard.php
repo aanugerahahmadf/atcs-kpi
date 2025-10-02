@@ -6,6 +6,8 @@ use App\Models\Building;
 use App\Models\Room;
 use App\Models\Cctv;
 use Livewire\Component;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\CctvsExport;
 
 class Dashboard extends Component
 {
@@ -18,5 +20,10 @@ class Dashboard extends Component
 			'cctvOffline' => Cctv::where('status','offline')->count(),
 			'cctvMaintenance' => Cctv::where('status','maintenance')->count(),
 		]);
+	}
+
+	public function exportCctvs()
+	{
+		return Excel::download(new CctvsExport, 'cctvs.xlsx');
 	}
 }

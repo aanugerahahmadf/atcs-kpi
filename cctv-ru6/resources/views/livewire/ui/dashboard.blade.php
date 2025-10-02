@@ -24,9 +24,7 @@
 			</div>
 		</div>
 		<div class="mt-6 flex gap-2">
-			<a href="#" class="px-4 py-2 bg-black text-white rounded-sm">Export Gedung</a>
-			<a href="#" class="px-4 py-2 bg-black text-white rounded-sm">Export Ruangan</a>
-			<a href="#" class="px-4 py-2 bg-black text-white rounded-sm">Export CCTV</a>
+			<a href="{{ route('export.cctvs') }}" class="px-4 py-2 bg-black text-white rounded-sm">Export CCTV</a>
 		</div>
 	</div>
 </div>
